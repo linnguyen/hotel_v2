@@ -1,0 +1,27 @@
+<!-- Page Content -->
+<div id="page-wrapper">
+  <div class="container-fluid">
+    <tiles:putAttribute name="content">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">Add Room Information</h1>
+      </div>
+      <!-- /.col-lg-12  -->
+    </div>
+    <%= form_for(@room,class: "form-horizontal") do |room| %>
+     <div class="form-group">
+        <%= room.label :room_name,class: "col-lg-4 control-label" %>
+     <div class="col-lg-10">
+        <%= room.text_field :name,class: "form-control" %>
+     </div>
+
+     </div>
+  <% end %>
+ </tiles:putAttribute>
+ <tiles:putAttribute name="javascript-source"></tiles:putAttribute>
+ </tiles:insertTemplate>
+ </div>
+ </div>
+
+
+
